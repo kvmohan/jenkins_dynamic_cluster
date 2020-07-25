@@ -1,6 +1,6 @@
 FROM centos:latest
 
-RUN yum install /sbin/services httpd -y
+RUN yum install httpd git curl -y
 RUN systemctl start httpd
 Run systemctl enable httpd
 COPY images /var/www/html/
